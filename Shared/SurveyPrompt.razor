@@ -1,0 +1,69 @@
+﻿<div class="alert alert-secondary mt-4">
+    <span class="oi oi-plus me-2" aria-hidden="true"></span>
+    <strong>@AddContact</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../addContact">añadir contacto.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-list me-2" aria-hidden="true"></span>
+    <strong>Quieres listar tus contactos?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../listContact">listar contacto.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-eye me-2" aria-hidden="true"></span>
+    <strong>Buscas un contacto?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../foundContact">buscar contacto.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-ban me-2" aria-hidden="true"></span>
+    <strong>Quieres ver si un contacto ya existe?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../existsContact">contacto existente.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-delete me-2" aria-hidden="true"></span>
+    <strong>Quieres eliminar un contacto?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../deleteContact">eliminar contacto.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-home me-2" aria-hidden="true"></span>
+    <strong>Sabes cuantos contactos más puedes ingresar?</strong>
+
+    <span class="text-nowrap">
+        Para saberlo preciona
+        <a href="../availableContact">espacios disponibles.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-calendar me-2" aria-hidden="true"></span>
+    <strong>Agenda llena?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../fullContact">agenda llena.</a>
+    </span>
+</div>
+
+@code {
+    // Demonstrates how a parent component can supply parameters
+    [Parameter]
+    public string? AddContact { get; set; }
+}
