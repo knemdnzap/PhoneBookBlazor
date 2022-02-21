@@ -1,6 +1,5 @@
 ﻿@page "/addContact"
-@using Data
-
+@using PhoneBook.Server.Controller;
 
 <PageTitle>Añadir Contacto</PageTitle>
 
@@ -8,32 +7,39 @@
 
 <p>Ingresa los datos para añadir un nuevo contacto</p>
 
-<div class="form-floating mb-3">
-    <input type="name" class="form-control" id="floatingInput" required >
-    <label for="floatingInput">Nombre</label>
-</div>
-<div class="form-floating mb-4">
-    <input type="number" class="form-control" id="floatingPhone" >
-    <label for="floatingPhone">Telefóno</label>
-</div>
-<div class="form-floating">
-    <input type="number" class="form-control" id="floatingCellPhone" >
-    <label for="floatingCellPhone">Celular</label>
+<div class="FormCss">
+  <EditForm Model = "contact" OnSubmit="Submit">
+    <DataAnnotationsValidator />
+      <div class="form-floating mb-3" style="height: 45px; width: 220px;">
+        <InputText id="name" class="form-control" placeholder="Leave a name here" @bind-Value="contact.name"/>
+        <label for="name">Nombre</label>
+        <ValidationMessage For= "(()=> contact.name)"/>
+      </div>
+      <br>
+      <div class="form-floating mb-3" style="height: 45px; width: 220px;">
+        <input type="tel" id="phone" class="form-control" placeholder="Leave a phone here" @bind-value="contact.phone" />
+        <label for="phone">Telefóno</label>
+      </div>
+      <br>
+      <div class="form-floating mb-3" style="height: 45px; width: 220px;">
+        <input type="tel" id="cellPhone" class="form-control" placeholder="Leave a cellphone here" @bind-value="contact.cellPhone" />
+        <label for="cellPhone">Celular</label>
+      </div>
+      <br>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Añadir</button>
+      </div>
+  </EditForm>
 </div>
 
-@* <EditForm Model="@Contact">
-    <table class="table">
-        <tr>
-            <td>Nombre: </td>
-            <td><input type="text" @bind="Contact.Name" /></td>
-        </tr>
-        <tr>
-            <td>Telefóno: </td>
-            <td><input type="text" @bind="Contact.Name" /></td>
-        </tr>
-        <tr>
-            <td>Celular: </td>
-            <td><input type="text" @bind="Contact.Name" /></td>
-        </tr>
-    </table>
-</EditForm> *@
+@code
+{
+  // Valor inicial cuando nuestra pagina carga por primera vez, contacto vacio
+    public Contact contact { get; set; } = new Contact();
+
+    // Metodo para enviar
+    private void Submit()
+    {
+      
+    }
+}

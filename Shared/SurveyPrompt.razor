@@ -1,4 +1,16 @@
-﻿<div class="alert alert-secondary mt-4">
+﻿<div class="alert alert-primary mt-4">
+    <strong>@PhoneSize</strong>
+
+    <span class="text-nowrap">
+        Para empezar te solicitaremos que ingreses un tamaño de mínimo 1 contacto o un máximo de 10 contactos
+        <div class="form-floating" style="height: 45px; width: 220px;">
+            <input type="number" class="form-control" placeholder="Leave a number here" id="floatingTextSize" required >
+            <label for="floatingTextSize">Tamaño de agenda</label>
+        </div>
+    </span>
+</div>
+
+<div class="alert alert-secondary mt-4">
     <span class="oi oi-plus me-2" aria-hidden="true"></span>
     <strong>@AddContact</strong>
 
@@ -66,4 +78,6 @@
     // Demonstrates how a parent component can supply parameters
     [Parameter]
     public string? AddContact { get; set; }
+    [Parameter]
+    public string? PhoneSize { get; set;}
 }
