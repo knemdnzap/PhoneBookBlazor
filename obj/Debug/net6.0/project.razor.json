@@ -12,6 +12,39 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": 862437382,
+        "Kind": "Components.Component",
+        "Name": "PhoneBook.Pages.Available",
+        "AssemblyName": "PhoneBook",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Available"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PhoneBook.Pages.Available"
+        }
+      },
+      {
+        "HashCode": 1713103411,
+        "Kind": "Components.Component",
+        "Name": "PhoneBook.Pages.Available",
+        "AssemblyName": "PhoneBook",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PhoneBook.Pages.Available"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PhoneBook.Pages.Available",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -87697358,
         "Kind": "Components.Component",
         "Name": "PhoneBook.Pages.Delete",
@@ -45,35 +78,35 @@
         }
       },
       {
-        "HashCode": 862437382,
+        "HashCode": -1908583852,
         "Kind": "Components.Component",
-        "Name": "PhoneBook.Pages.Available",
+        "Name": "PhoneBook.Pages.Found",
         "AssemblyName": "PhoneBook",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Available"
+            "TagName": "Found"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PhoneBook.Pages.Available"
+          "Common.TypeName": "PhoneBook.Pages.Found"
         }
       },
       {
-        "HashCode": 1713103411,
+        "HashCode": 546724353,
         "Kind": "Components.Component",
-        "Name": "PhoneBook.Pages.Available",
+        "Name": "PhoneBook.Pages.Found",
         "AssemblyName": "PhoneBook",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "PhoneBook.Pages.Available"
+            "TagName": "PhoneBook.Pages.Found"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PhoneBook.Pages.Available",
+          "Common.TypeName": "PhoneBook.Pages.Found",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -177,35 +210,35 @@
         }
       },
       {
-        "HashCode": -1908583852,
+        "HashCode": -255971635,
         "Kind": "Components.Component",
-        "Name": "PhoneBook.Pages.Found",
+        "Name": "PhoneBook.Pages.List",
         "AssemblyName": "PhoneBook",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Found"
+            "TagName": "List"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PhoneBook.Pages.Found"
+          "Common.TypeName": "PhoneBook.Pages.List"
         }
       },
       {
-        "HashCode": 546724353,
+        "HashCode": 1466276093,
         "Kind": "Components.Component",
-        "Name": "PhoneBook.Pages.Found",
+        "Name": "PhoneBook.Pages.List",
         "AssemblyName": "PhoneBook",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "PhoneBook.Pages.Found"
+            "TagName": "PhoneBook.Pages.List"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PhoneBook.Pages.Found",
+          "Common.TypeName": "PhoneBook.Pages.List",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -243,40 +276,40 @@
         }
       },
       {
-        "HashCode": -255971635,
+        "HashCode": 1405079665,
         "Kind": "Components.Component",
-        "Name": "PhoneBook.Pages.List",
+        "Name": "PhoneBook.App",
         "AssemblyName": "PhoneBook",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "List"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PhoneBook.Pages.List"
+          "Common.TypeName": "PhoneBook.App"
         }
       },
       {
-        "HashCode": 1466276093,
+        "HashCode": 235262616,
         "Kind": "Components.Component",
-        "Name": "PhoneBook.Pages.List",
+        "Name": "PhoneBook.App",
         "AssemblyName": "PhoneBook",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "PhoneBook.Pages.List"
+            "TagName": "PhoneBook.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PhoneBook.Pages.List",
+          "Common.TypeName": "PhoneBook.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -1915071894,
+        "HashCode": -1599200046,
         "Kind": "Components.Component",
         "Name": "PhoneBook.Shared.SurveyPrompt",
         "AssemblyName": "PhoneBook",
@@ -294,6 +327,14 @@
             "Metadata": {
               "Common.PropertyName": "AddContact"
             }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "PhoneSize",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "PhoneSize"
+            }
           }
         ],
         "Metadata": {
@@ -302,7 +343,7 @@
         }
       },
       {
-        "HashCode": 119184355,
+        "HashCode": 1951814310,
         "Kind": "Components.Component",
         "Name": "PhoneBook.Shared.SurveyPrompt",
         "AssemblyName": "PhoneBook",
@@ -319,6 +360,14 @@
             "TypeName": "System.String",
             "Metadata": {
               "Common.PropertyName": "AddContact"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "PhoneSize",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "PhoneSize"
             }
           }
         ],
@@ -454,39 +503,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "PhoneBook.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1405079665,
-        "Kind": "Components.Component",
-        "Name": "PhoneBook.App",
-        "AssemblyName": "PhoneBook",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PhoneBook.App"
-        }
-      },
-      {
-        "HashCode": 235262616,
-        "Kind": "Components.Component",
-        "Name": "PhoneBook.App",
-        "AssemblyName": "PhoneBook",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "PhoneBook.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PhoneBook.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
