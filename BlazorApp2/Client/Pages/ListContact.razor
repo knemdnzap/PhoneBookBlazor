@@ -1,0 +1,52 @@
+﻿@page  "/ListContact"
+@using BlazorApp2.Shared;
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<h3>Contacts</h3>
+
+@if (_contacts == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>phone</th>
+                <th>cellphone</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contact in _contacts)
+            {
+                <tr>
+                    <td>@contact.id</td>
+                    <td>@contact.name</td>
+                    <td>@contact.phone</td>
+                    <td>@contact.cellPhone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <button class="btn btn-success" @onclick="Create">Añadir Contacto</button>
+    </div>
+}
+
+@code
+{
+    private List<Contact> _contacts;
+    protected override async Task OnInitializedAsync()
+    {
+        _contacts = await Http.GetFromJsonAsync<List<Contact>>("https://localhost:7086/api/Contact");
+    }
+    private void Create()
+    {
+        Navigation.NavigateTo($"/add");
+    }
+}
