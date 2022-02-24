@@ -1,1 +1,28 @@
 @page "/deleteContact"
+@using BlazorApp2.Shared;
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<PageTitle>Eliminar Contacto</PageTitle>
+
+<h1>Eliminar Contacto</h1>
+
+<p>Ingresa el nombre del contacto a eliminar</p>
+
+<div class="form-floating mb-3" style="height: 45px; width: 220px;">
+    <input class="form-control" placeholder="Leave a name here" id="floatingTextName" required >
+    <label for="floatingTextName">Nombre</label>
+</div>
+<br>
+<div class="col-12">
+    <button class="btn btn-danger">Eliminar Contacto</button>
+</div>
+
+@code
+{
+    private async Task DeleteContact(string name)
+    {
+        await Http.DeleteAsync($"/api/Contact/{name}");
+        Navigation.NavigateTo($"/listContact");
+    }
+}

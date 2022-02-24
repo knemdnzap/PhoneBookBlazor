@@ -20,9 +20,19 @@ namespace BlazorApp2.Server.Controllers
         [HttpGet]
         public IEnumerable<Contact> GetAllEmployees()
         {
-            try        {
+            try{
                 return _context.Contacts.ToList();
             }catch (Exception e){
+                throw;
+            }
+        }
+
+        [HttpGet("{name}")]
+        public Contact GetContactByName(string name)
+        {
+            try {
+                return _context.Contacts.SingleOrDefault(contact => contact.name == name);
+            }catch (Exception){
                 throw;
             }
         }
@@ -32,6 +42,19 @@ namespace BlazorApp2.Server.Controllers
             _context.Contacts.Add(contact);
             _context.SaveChanges();
             return Ok(_context.Contacts.ToList());
+        }
+
+        [HttpDelete("{name}")]
+        public IActionResult DeleteContact(string name)
+        {
+            var contactDelete = _context.Contacts.SingleOrDefault(delete => delete.name == name);
+            if (contactDelete == null)
+            {
+                return NotFound("Contacto con el nombre " + name + " no existe.");
+            }
+            _context.Contacts.Remove(contactDelete);
+            _context.SaveChanges();
+            return Ok("Contacto con el nombre " + name + " se a eliminado correctamente.");
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {}
+    "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {}
   },
   "projects": {
-    "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
+    "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
+        "projectUniqueName": "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
         "projectName": "BlazorApp2.Shared",
-        "projectPath": "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
+        "projectPath": "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
         "packagesPath": "C:\\Users\\knmendozan\\.nuget\\packages\\",
-        "outputPath": "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Shared\\obj\\",
+        "outputPath": "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\knmendozan\\AppData\\Roaming\\NuGet\\NuGet.Config",

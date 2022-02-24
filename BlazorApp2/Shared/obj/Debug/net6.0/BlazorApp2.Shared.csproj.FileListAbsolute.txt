@@ -22,3 +22,27 @@ D:\Escritorio\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\Bl
 D:\Escritorio\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\refint\BlazorApp2.Shared.dll
 D:\Escritorio\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.pdb
 D:\Escritorio\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\ref\BlazorApp2.Shared.dll
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\bin\Debug\net6.0\BlazorApp2.Shared.deps.json
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\bin\Debug\net6.0\BlazorApp2.Shared.dll
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\bin\Debug\net6.0\BlazorApp2.Shared.pdb
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.csproj.AssemblyReference.cache
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.AssemblyInfoInputs.cache
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.AssemblyInfo.cs
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.csproj.CoreCompileInputs.cache
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.dll
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\refint\BlazorApp2.Shared.dll
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.pdb
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUI\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\ref\BlazorApp2.Shared.dll
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\bin\Debug\net6.0\BlazorApp2.Shared.deps.json
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\bin\Debug\net6.0\BlazorApp2.Shared.dll
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\bin\Debug\net6.0\BlazorApp2.Shared.pdb
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.csproj.AssemblyReference.cache
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.AssemblyInfoInputs.cache
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.AssemblyInfo.cs
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.csproj.CoreCompileInputs.cache
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.dll
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\refint\BlazorApp2.Shared.dll
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\BlazorApp2.Shared.pdb
+D:\Documentos\Trabajo\Agenda Telefonica\PhoneBookGUIBlazor\PhoneBookBlazor\BlazorApp2\Shared\obj\Debug\net6.0\ref\BlazorApp2.Shared.dll

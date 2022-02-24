@@ -1577,11 +1577,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
+      "projectUniqueName": "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
       "projectName": "BlazorApp2.Client",
-      "projectPath": "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
+      "projectPath": "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
       "packagesPath": "C:\\Users\\knmendozan\\.nuget\\packages\\",
-      "outputPath": "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Client\\obj\\",
+      "outputPath": "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\knmendozan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1599,8 +1599,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
-              "projectPath": "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj"
+            "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
+              "projectPath": "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj"
             }
           }
         }

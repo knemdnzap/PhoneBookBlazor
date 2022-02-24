@@ -1,16 +1,83 @@
-﻿<div class="alert alert-secondary mt-4">
-    <span class="oi oi-pencil me-2" aria-hidden="true"></span>
-    <strong>@Title</strong>
+﻿<div class="alert alert-primary mt-4">
+    <strong>@PhoneSize</strong>
 
     <span class="text-nowrap">
-        Please take our
-        <a target="_blank" class="font-weight-bold link-dark" href="https://go.microsoft.com/fwlink/?linkid=2148851">brief survey</a>
+        Para empezar te solicitaremos que ingreses un tamaño de mínimo 1 contacto o un máximo de 10 contactos
+        <div class="form-floating" style="height: 45px; width: 220px;">
+            <input type="number" class="form-control" placeholder="Leave a number here" id="floatingTextSize" required >
+            <label for="floatingTextSize">Tamaño de agenda</label>
+        </div>
     </span>
-    and tell us what you think.
+</div>
+
+<div class="alert alert-secondary mt-4">
+    <span class="oi oi-plus me-2" aria-hidden="true"></span>
+    <strong>@AddContact</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../add">añadir contacto.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-list me-2" aria-hidden="true"></span>
+    <strong>Quieres listar tus contactos?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../listContact">listar contacto.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-eye me-2" aria-hidden="true"></span>
+    <strong>Buscas un contacto?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../foundContact">buscar contacto.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-ban me-2" aria-hidden="true"></span>
+    <strong>Quieres ver si un contacto ya existe?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../existsContact">contacto existente.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-delete me-2" aria-hidden="true"></span>
+    <strong>Quieres eliminar un contacto?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../deleteContact">eliminar contacto.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-home me-2" aria-hidden="true"></span>
+    <strong>Sabes cuantos contactos más puedes ingresar?</strong>
+
+    <span class="text-nowrap">
+        Para saberlo preciona
+        <a href="../availableContact">espacios disponibles.</a>
+    </span>
+    <br>
+
+    <span class="oi oi-calendar me-2" aria-hidden="true"></span>
+    <strong>Agenda llena?</strong>
+
+    <span class="text-nowrap">
+        Por favor preciona
+        <a href="../fullContact">agenda llena.</a>
+    </span>
 </div>
 
 @code {
     // Demonstrates how a parent component can supply parameters
     [Parameter]
-    public string? Title { get; set; }
+    public string? AddContact { get; set; }
+    [Parameter]
+    public string? PhoneSize { get; set;}
 }

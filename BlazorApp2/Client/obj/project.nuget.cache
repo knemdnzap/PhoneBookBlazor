@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+b/ff/XZXyck7VMd2YpW9aTqV5CaBdwLpo3i7eZZhpboKNrH7gHZx7IN/ov4VuC/vecubKak/1xzYijOX0MmeQ==",
+  "dgSpecHash": "VYAnl5lEvyn0iJQIT+Tujb+HL6xv58FGPd9fjlv2DFPDxRD5tyg1ZJGgxgTovV5jqrPrT5gc2kLxXBMhAjKvsw==",
   "success": true,
-  "projectFilePath": "D:\\Escritorio\\PhoneBookGUI\\PhoneBookBlazor\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
+  "projectFilePath": "D:\\Documentos\\Trabajo\\Agenda Telefonica\\PhoneBookGUIBlazor\\PhoneBookBlazor\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\knmendozan\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.1\\microsoft.aspnetcore.authorization.6.0.1.nupkg.sha512",
     "C:\\Users\\knmendozan\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.1\\microsoft.aspnetcore.components.6.0.1.nupkg.sha512",

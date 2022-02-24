@@ -9,7 +9,6 @@ namespace BlazorApp2.Shared
     public class Contact
     {
         [Key]
-        [Required]
         public int id { get; set;}
         [Required(ErrorMessage = "El nombre es obligatorio")]
         public string name { get; set; }
