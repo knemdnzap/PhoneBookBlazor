@@ -9,9 +9,18 @@
 
 <p>Ingresa el nombre del contacto a buscar</p>
 
-<div class="form-floating mb-3" style="height: 45px; width: 220px;">
-    <input class="form-control" placeholder="Leave a name here" id="floatingTextName" required >
-    <label for="floatingTextName">Nombre</label>
+<div class="row gy-2 gx-3 align-items-center">
+    <div class="col-auto">
+        <div class="form-floating">
+            <input class="form-control" placeholder="Leave a name here" id="floatingTextName" required >
+            <label for="floatingTextName">Nombre</label>
+        </div>
+    </div>
+    <div class="col-auto">
+        <div>
+            <button class="btn btn-success" type="submit">Buscar</button>
+        </div>
+    </div>
 </div>
 
 @if (_contacts == null )
@@ -29,7 +38,7 @@ else
                 <th>Celular </th>
             </tr>
         </thead>
-</table>
+    </table>
 }
 
 @code

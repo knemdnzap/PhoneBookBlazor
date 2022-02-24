@@ -1,4 +1,7 @@
 @page "/existsContact"
+@using BlazorApp2.Shared;
+@inject HttpClient Http
+@inject NavigationManager Navigation
 
 <PageTitle>Contacto Existente</PageTitle>
 
@@ -6,15 +9,43 @@
 
 <p>Ingresa el nombre del contacto a buscar</p>
 
-<div class="form-floating mb-3" style="height: 45px; width: 220px;">
-    <input class="form-control" placeholder="Leave a name here" id="floatingTextName" required >
-    <label for="floatingTextName">Nombre</label>
+<div class="row gy-2 gx-3 align-items-center">
+    <div class="col-auto">
+        <div class="form-floating">
+            <input class="form-control" placeholder="Leave a name here" id="floatingTextName" required >
+            <label for="floatingTextName">Nombre</label>
+        </div>
+    </div>
+    <div class="col-auto">
+        <div>
+            <button class="btn btn-success" type="submit">Buscar</button>
+        </div>
+    </div>
 </div>
 
-<table class="table table-stripede">
-        <tr>
-            <th>Nombre </th>
-            <th>Telefóno </th>
-            <th>Celular </th>
-        </tr>
-</table>
+@if (_contacts == null )
+{
+    <p><em>Obteniendo los datos...</em></p>
+}
+else
+{
+    <table class="table table-stripede">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre </th>
+                <th>Telefóno </th>
+                <th>Celular </th>
+            </tr>
+        </thead>
+    </table>
+}
+
+@code
+{
+    private List<Contact> _contacts;
+    protected override async Task OnInitializedAsync()
+    {
+        _contacts = await Http.GetFromJsonAsync<List<Contact>>($"https://localhost:7086/api/Contact");
+    }
+}
