@@ -7,22 +7,34 @@
 
 <h1>Eliminar Contacto</h1>
 
-<p>Ingresa el nombre del contacto a eliminar</p>
+<p>Ingresa el nombre del contacto que quieres eliminar</p>
 
-<div class="form-floating mb-3" style="height: 45px; width: 220px;">
-    <input class="form-control" placeholder="Leave a name here" id="floatingTextName" required >
-    <label for="floatingTextName">Nombre</label>
-</div>
-<br>
-<div class="col-12">
-    <button class="btn btn-danger">Eliminar Contacto</button>
+<div class="FormCss">
+    <EditForm Model = "@_contact" OnValidSubmit="@DeleteContact">
+    <DataAnnotationsValidator />
+            <div class="form-floating mb-3" style="height: 45px; width: 220px;">
+                <InputText id="name" class="form-control" @bind-Value="_contact.name"/>
+                <label for="name">Nombre</label>
+                <ValidationMessage For= "(()=> _contact.name)"/>
+            </div>
+            <br>
+            <div class="col-12">
+                <button class="btn btn-danger" @onclick = "DeleteContact">Eliminar Contacto</button>
+            </div>
+    </EditForm>
 </div>
 
 @code
 {
-    private async Task DeleteContact(string name)
+    private Contact _contact = new();
+    private async Task DeleteContact()
     {
-        await Http.DeleteAsync($"/api/Contact/{name}");
-        Navigation.NavigateTo($"/listContact");
+        HttpResponseMessage responseMessage = await Http.DeleteAsync($"/api/Contact/" + _contact.name);
+
+        if (responseMessage.IsSuccessStatusCode)
+        {
+            Add.sizeActually--;
+            Navigation.NavigateTo($"/listContact");
+        }
     }
 }

@@ -1,7 +1,30 @@
 @page "/fullContact"
+@using BlazorApp2.Shared;
 
 <PageTitle>Agenda Llena</PageTitle>
 
 <h1>Agenda Llena</h1>
 
 <p>En este modulo sabras si aún cuentas con espacio para añadir contactos a tu agenda</p>
+
+<div class="alert alert-secondary mt-4">
+    @if (Add.sizeActually == Index.sizeContact)
+    {
+        <span class="oi oi-circle-x me-2">
+            <span class="text-danger">
+                Tu agenda telefónica esta llena
+            </span>
+        </span>
+    } else{
+        <span class="oi oi-action-undo me-2">
+            <span class="text-success">
+                Tu agenda telefónica aún cuenta con espacio para añadir contactos
+            </span>
+        </span>
+    }
+</div>
+
+@code
+{
+    private Contact contact = new();
+}

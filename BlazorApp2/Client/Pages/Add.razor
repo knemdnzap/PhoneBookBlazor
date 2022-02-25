@@ -12,19 +12,19 @@
 <div class="FormCss">
     <EditForm Model="@_contact" OnValidSubmit="Post">
         <DataAnnotationsValidator />
+        <ValidationSummary />
             <div class="form-floating mb-3" style="height: 45px; width: 220px;">
-                <InputText id="name" class="form-control" placeholder="Leave a name here" @bind-Value="_contact.name"/>
+                <InputText @ref= "name" id="name" class="form-control" @bind-Value="_contact.name"/>
                 <label for="name">Nombre</label>
-                <ValidationMessage For= "(()=> _contact.name)"/>
             </div>
                 <br>
             <div class="form-floating mb-3" style="height: 45px; width: 220px;">
-                <input type="tel" id="phone" class="form-control" placeholder="Leave a phone here" @bind-value="_contact.phone" />
-                <label for="phone">Telefóno</label>
+                <InputText @ref= "phone" id="phone" class="form-control" @bind-Value="_contact.phone"/>
+                <label for="phone">Telefono</label>
             </div>
                 <br>
             <div class="form-floating mb-3" style="height: 45px; width: 220px;">
-                <input type="tel" id="cellPhone" class="form-control" placeholder="Leave a cellphone here" @bind-value="_contact.cellPhone" />
+                <InputText @ref= "cellPhone" id="cellPhone" class="form-control" @bind-Value="_contact.cellPhone"/>
                 <label for="cellPhone">Celular</label>
             </div>
                 <br>
@@ -36,10 +36,22 @@
 
 @code
 {
+    InputText name;
+    InputText phone;
+    InputText cellPhone;
     private Contact _contact = new();
+    public static int sizeActually = 0;
     private async Task Post()
     {
-        await Http.PostAsJsonAsync<Contact>("/api/Contact", _contact);
-        Navigation.NavigateTo($"/listContact");
+        if (Index.sizeContact > 0 && sizeActually < Index.sizeContact)
+        {
+            HttpResponseMessage responseMessage = await Http.PostAsJsonAsync<Contact>("/api/Contact", _contact);
+
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                sizeActually++;
+                Navigation.NavigateTo($"/listContact");
+            }
+        }
     }
 }

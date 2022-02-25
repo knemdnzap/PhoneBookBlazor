@@ -9,43 +9,59 @@
 
 <p>Ingresa el nombre del contacto a buscar</p>
 
-<div class="row gy-2 gx-3 align-items-center">
-    <div class="col-auto">
-        <div class="form-floating">
-            <input class="form-control" placeholder="Leave a name here" id="floatingTextName" required >
-            <label for="floatingTextName">Nombre</label>
+<div class="FormCss">
+    <EditForm Model = "@_contact" OnValidSubmit="@ExistContact">
+    <DataAnnotationsValidator />
+        <div class="row gy-2 gx-3 align-items-center">
+            <div class="col-auto">
+                <div class="form-floating">
+                    <InputText id="name" class="form-control" @bind-Value="_contact.name"/>
+                    <label for="name">Nombre</label>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div>
+                    <button class="btn btn-success" type="submit" @onclick = "ExistContact">Buscar</button>
+                </div>
+            </div>
+            <div class="alert alert-secondary mt-4">
+                @if (!contact)
+                {
+                    <span class="oi oi-circle-x me-2">
+                        <span class="text-danger">
+                            @message
+                        </span>
+                    </span>
+                } else{
+                    <span class="oi oi-action-undo me-2">
+                        <span class="text-success">
+                            @message
+                        </span>
+                    </span>
+                }
+            </div>
         </div>
-    </div>
-    <div class="col-auto">
-        <div>
-            <button class="btn btn-success" type="submit">Buscar</button>
-        </div>
-    </div>
+    </EditForm>
 </div>
-
-@if (_contacts == null )
-{
-    <p><em>Obteniendo los datos...</em></p>
-}
-else
-{
-    <table class="table table-stripede">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Nombre </th>
-                <th>Telefóno </th>
-                <th>Celular </th>
-            </tr>
-        </thead>
-    </table>
-}
 
 @code
 {
-    private List<Contact> _contacts;
-    protected override async Task OnInitializedAsync()
+    private Contact _contact = new();
+    private bool contact;
+    private string message = "";
+    private async Task ExistContact()
     {
-        _contacts = await Http.GetFromJsonAsync<List<Contact>>($"https://localhost:7086/api/Contact");
+        try{
+            contact = await Http.GetFromJsonAsync<bool>("/api/Contact/exist/" + _contact.name);
+
+            if (!contact)
+            {
+                message = "El contacto que buscas no existe. Intenta con otro o revisa ortografía.";
+            } else {
+                message = "El contacto si existe en tu agenda telefónica.";
+            }
+        } catch(Exception){
+            throw;
+        }
     }
 }

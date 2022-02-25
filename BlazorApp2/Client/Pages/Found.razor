@@ -9,21 +9,51 @@
 
 <p>Ingresa el nombre del contacto a buscar</p>
 
-<div class="row gy-2 gx-3 align-items-center">
-    <div class="col-auto">
-        <div class="form-floating">
-            <input class="form-control" placeholder="Leave a name here" id="floatingTextName" required >
-            <label for="floatingTextName">Nombre</label>
+<div class="FormCss">
+    <EditForm Model = "@contact" OnValidSubmit="@FoundContact">
+    <DataAnnotationsValidator />
+        <div class="row gy-2 gx-3 align-items-center">
+            <div class="col-auto">
+                <div class="form-floating">
+                    <InputText id="nameContact" class="form-control" @bind-Value="contact.name"/>
+                    <label for="nameContact">Nombre</label>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div>
+                    <button class="btn btn-success" type="submit" @onclick = "FoundContact">Buscar</button>
+                </div>
+            </div>
+            @if (contact == null)
+            {
+                <span class="oi oi-circle-x me-2">
+                    <span class="text-danger">
+                        @message
+                    </span>
+                </span>
+            } else{
+                <table class="table table-stripede">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre </th>
+                            <th>Telefóno </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@contact.id</td>
+                            <td>@NameContact</td>
+                            <td>@CellPhone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
         </div>
-    </div>
-    <div class="col-auto">
-        <div>
-            <button class="btn btn-success" type="submit">Buscar</button>
-        </div>
-    </div>
+    </EditForm>
 </div>
 
-@if (_contacts == null )
+@* @if (contact == null )
 {
     <p><em>Obteniendo los datos...</em></p>
 }
@@ -35,17 +65,39 @@ else
                 <th>#</th>
                 <th>Nombre </th>
                 <th>Telefóno </th>
-                <th>Celular </th>
             </tr>
         </thead>
+        <tbody>
+            <tr>
+                <td>@contact.id</td>
+                <td>@NameContact</td>
+                <td>@CellPhone</td>
+            </tr>
+        </tbody>
     </table>
-}
+} *@
 
 @code
 {
-    private List<Contact> _contacts;
-    protected override async Task OnInitializedAsync()
+    private Contact contact = new();
+    private Contact _contact;
+    private string NameContact;
+    private string CellPhone;
+    private string message = "";
+    private async void FoundContact()
     {
-        _contacts = await Http.GetFromJsonAsync<List<Contact>>($"https://localhost:7086/api/Contact");
+        try{
+            contact = await Http.GetFromJsonAsync<Contact>($"/api/Contact/" + contact.name);
+
+            if ( contact != null)
+            {
+                NameContact = contact.name;
+                CellPhone = contact.cellPhone;
+            } else{
+                message = "El contacto que buscas no existe. Intenta con otro o revisa ortografía.";
+            }
+        } catch(Exception){
+            throw;
+        }
     }
 }

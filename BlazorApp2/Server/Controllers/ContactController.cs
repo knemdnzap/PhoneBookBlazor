@@ -56,5 +56,18 @@ namespace BlazorApp2.Server.Controllers
             _context.SaveChanges();
             return Ok("Contacto con el nombre " + name + " se a eliminado correctamente.");
         }
+
+        [HttpGet("exist/{name}")]
+        public bool ExitsContact(string name)
+        {
+            var contact = _context.Contacts.SingleOrDefault(exist => exist.name == name);
+            if (contact != null)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
     }
 }

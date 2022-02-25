@@ -4559,35 +4559,35 @@
         }
       },
       {
-        "HashCode": 1795997589,
+        "HashCode": 1527631587,
         "Kind": "Components.Component",
-        "Name": "BlazorApp2.Client.Pages.Found",
+        "Name": "BlazorApp2.Client.App",
         "AssemblyName": "BlazorApp2.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Found"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp2.Client.Pages.Found"
+          "Common.TypeName": "BlazorApp2.Client.App"
         }
       },
       {
-        "HashCode": 1797155658,
+        "HashCode": -1303184963,
         "Kind": "Components.Component",
-        "Name": "BlazorApp2.Client.Pages.Found",
+        "Name": "BlazorApp2.Client.App",
         "AssemblyName": "BlazorApp2.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorApp2.Client.Pages.Found"
+            "TagName": "BlazorApp2.Client.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp2.Client.Pages.Found",
+          "Common.TypeName": "BlazorApp2.Client.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -4691,39 +4691,6 @@
         }
       },
       {
-        "HashCode": 621326596,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp2.Client.Pages.Delete",
-        "AssemblyName": "BlazorApp2.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Delete"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp2.Client.Pages.Delete"
-        }
-      },
-      {
-        "HashCode": -1078259243,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp2.Client.Pages.Delete",
-        "AssemblyName": "BlazorApp2.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorApp2.Client.Pages.Delete"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp2.Client.Pages.Delete",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1135599789,
         "Kind": "Components.Component",
         "Name": "BlazorApp2.Client.Pages.Exist",
@@ -4786,6 +4753,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorApp2.Client.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1795997589,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp2.Client.Pages.Found",
+        "AssemblyName": "BlazorApp2.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Found"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp2.Client.Pages.Found"
+        }
+      },
+      {
+        "HashCode": 1797155658,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp2.Client.Pages.Found",
+        "AssemblyName": "BlazorApp2.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp2.Client.Pages.Found"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp2.Client.Pages.Found",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -4885,39 +4885,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorApp2.Client.Pages.ListContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1527631587,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp2.Client.App",
-        "AssemblyName": "BlazorApp2.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp2.Client.App"
-        }
-      },
-      {
-        "HashCode": -1303184963,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp2.Client.App",
-        "AssemblyName": "BlazorApp2.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorApp2.Client.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp2.Client.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
