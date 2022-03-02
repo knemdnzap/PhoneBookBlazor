@@ -17,6 +17,7 @@
                 <div class="form-floating">
                     <InputText id="name" class="form-control" @bind-Value="_contact.name"/>
                     <label for="name">Nombre</label>
+                    <ValidationMessage For= "(()=> _contact.name)"/>
                 </div>
             </div>
             <div class="col-auto">
@@ -24,24 +25,25 @@
                     <button class="btn btn-success" type="submit" @onclick = "ExistContact">Buscar</button>
                 </div>
             </div>
-            <div class="alert alert-secondary mt-4">
-                @if (!contact)
-                {
-                    <span class="oi oi-circle-x me-2">
-                        <span class="text-danger">
-                            @message
-                        </span>
-                    </span>
-                } else{
-                    <span class="oi oi-action-undo me-2">
-                        <span class="text-success">
-                            @message
-                        </span>
-                    </span>
-                }
-            </div>
         </div>
     </EditForm>
+</div>
+
+<div class="alert alert-secondary mt-4">
+    @if (!contact)
+    {
+        <span class="oi oi-circle-x me-2">
+            <span class="text-danger">
+                @message
+            </span>
+        </span>
+        } else{
+        <span class="oi oi-action-undo me-2">
+            <span class="text-success">
+                @message
+            </span>
+        </span>
+    }
 </div>
 
 @code
@@ -61,7 +63,6 @@
                 message = "El contacto si existe en tu agenda telefónica.";
             }
         } catch(Exception){
-            throw;
         }
     }
 }

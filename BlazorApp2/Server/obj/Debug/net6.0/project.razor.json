@@ -4691,6 +4691,39 @@
         }
       },
       {
+        "HashCode": 621326596,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp2.Client.Pages.Delete",
+        "AssemblyName": "BlazorApp2.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Delete"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp2.Client.Pages.Delete"
+        }
+      },
+      {
+        "HashCode": -1078259243,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp2.Client.Pages.Delete",
+        "AssemblyName": "BlazorApp2.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp2.Client.Pages.Delete"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp2.Client.Pages.Delete",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1135599789,
         "Kind": "Components.Component",
         "Name": "BlazorApp2.Client.Pages.Exist",

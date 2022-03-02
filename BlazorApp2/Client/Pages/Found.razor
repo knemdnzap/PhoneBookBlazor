@@ -12,6 +12,7 @@
 <div class="FormCss">
     <EditForm Model = "@contact" OnValidSubmit="@FoundContact">
     <DataAnnotationsValidator />
+    <ValidationSummary />
         <div class="row gy-2 gx-3 align-items-center">
             <div class="col-auto">
                 <div class="form-floating">
@@ -24,6 +25,10 @@
                     <button class="btn btn-success" type="submit" @onclick = "FoundContact">Buscar</button>
                 </div>
             </div>
+            <br>
+        </div>
+
+        <div class="alert alert-secondary mt-4">
             @if (contact == null)
             {
                 <span class="oi oi-circle-x me-2">
@@ -31,34 +36,23 @@
                         @message
                     </span>
                 </span>
-            } else{
-                <table class="table table-stripede">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nombre </th>
-                            <th>Telefóno </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>@contact.id</td>
-                            <td>@NameContact</td>
-                            <td>@CellPhone</td>
-                        </tr>
-                    </tbody>
-                </table>
+                } else{
+                <span class="oi oi-action-undo me-2">
+                    <span class="text-success">
+                        @message
+                    </span>
+                </span>
             }
         </div>
     </EditForm>
 </div>
 
-@* @if (contact == null )
+<br>
+
+@if (contact == null)
 {
     <p><em>Obteniendo los datos...</em></p>
-}
-else
-{
+} else{
     <table class="table table-stripede">
         <thead>
             <tr>
@@ -75,7 +69,7 @@ else
             </tr>
         </tbody>
     </table>
-} *@
+}
 
 @code
 {
@@ -84,7 +78,7 @@ else
     private string NameContact;
     private string CellPhone;
     private string message = "";
-    private async void FoundContact()
+    private async Task FoundContact()
     {
         try{
             contact = await Http.GetFromJsonAsync<Contact>($"/api/Contact/" + contact.name);
@@ -93,11 +87,11 @@ else
             {
                 NameContact = contact.name;
                 CellPhone = contact.cellPhone;
+                message = "Aquí puedes visualizar el contacto que buscabas.";
             } else{
                 message = "El contacto que buscas no existe. Intenta con otro o revisa ortografía.";
             }
         } catch(Exception){
-            throw;
         }
     }
 }

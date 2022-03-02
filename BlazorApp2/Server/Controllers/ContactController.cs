@@ -44,6 +44,25 @@ namespace BlazorApp2.Server.Controllers
             return Ok(_context.Contacts.ToList());
         }
 
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
+        // public ActionResult Create([Bind(Include="IdArticulo, CodArticulo, DesArticulo, IsActivo")] Articulo articulo)
+        // {
+
+        //     if (db.Articulos.Any(a => a.CodArticulo == articulo.CodArticulo))
+        //     {
+        //         ModelState.AddModelError("CodArticulo", "Ya existe un artículo con este código");
+        //     }
+        //     if (ModelState.IsValid)
+        //     {
+        //         db.Articulos.Add(articulo);
+        //         db.SaveChanges();
+        //         return RedirectToAction("Index");
+        //     }
+
+        //     return View(articulo);
+        // }
+
         [HttpDelete("{name}")]
         public IActionResult DeleteContact(string name)
         {
@@ -56,6 +75,18 @@ namespace BlazorApp2.Server.Controllers
             _context.SaveChanges();
             return Ok("Contacto con el nombre " + name + " se a eliminado correctamente.");
         }
+
+        // public async Task DeleteContact(Contact contact)
+        // {
+        //     try
+        //     {
+        //         _context.Contacts.Remove(contact);
+        //         await _context.SaveChangesAsync();
+        //     } catch (Exception)
+        //     {
+        //         throw;
+        //     }
+        // }
 
         [HttpGet("exist/{name}")]
         public bool ExitsContact(string name)
