@@ -7,3 +7,4 @@ Esto es un proyecto con GUI en Blazor, el cual podras encontrar una agenda telef
 3. Añadir mensaje de no se encuentra contacto a eliminar, como también de que el contacto a sido eliminado satisfactoriamente.
 4. Cambiar tamaño de labels.
 5. Cambiar controlador para borrar por medio de objeto y no por medio de parametro.
+6. Añadir validación de contactos iguales.
