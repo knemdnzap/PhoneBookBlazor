@@ -42,30 +42,10 @@
         Por favor preciona
         <a href="../deleteContact">eliminar contacto.</a>
     </span>
-    <br>
-
-    <span class="oi oi-home me-2" aria-hidden="true"></span>
-    <strong>Sabes cuantos contactos más puedes ingresar?</strong>
-
-    <span class="text-nowrap">
-        Para saberlo preciona
-        <a href="../availableContact">espacios disponibles.</a>
-    </span>
-    <br>
-
-    <span class="oi oi-calendar me-2" aria-hidden="true"></span>
-    <strong>Agenda llena?</strong>
-
-    <span class="text-nowrap">
-        Por favor preciona
-        <a href="../fullContact">agenda llena.</a>
-    </span>
 </div>
 
 @code {
     // Demonstrates how a parent component can supply parameters
     [Parameter]
     public string? AddContact { get; set; }
-    [Parameter]
-    public string? PhoneSize { get; set;}
 }
