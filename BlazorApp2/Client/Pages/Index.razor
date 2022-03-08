@@ -6,44 +6,4 @@
 
 Bienvenido a tu agenda telefónica.
 
-<div class="alert alert-primary mt-4">
-    <span class="text-nowrap">
-        Para empezar te solicitaremos que ingreses un tamaño de mínimo 1 contacto o un máximo de 10 contactos
-        <div class="row gy-2 gx-3 align-items-center">
-            <div class="col-auto">
-                <div class="form-floating" style="height: 45px; width: 220px;">
-                    <input type="number" class="form-control" id="sizeDirectory" @bind-value = "enterContactSize" >
-                    <label for="sizeDirectory">Tamaño de agenda</label>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div>
-                    <button class="btn btn-success" type="submit" @onclick = "ValidSubmit">Confirmar</button>
-                </div>
-            </div>
-            <div class="col-auto">
-                Tu espacio en la agenda es de: @sizeContact
-            </div>
-        </div>
-    </span>
-</div>
-
-@code
-{
-    private string enterContactSize;
-    public static int sizeContact;
-    public async Task ValidSubmit()
-    {
-        try
-        {
-            if (enterContactSize != null || enterContactSize != "0")
-                sizeContact = Int16.Parse(enterContactSize);
-        }
-        catch (Exception)
-        {
-            throw;
-        }
-    }
-}
-
 <SurveyPrompt AddContact="Quieres adicionar contactos? " />

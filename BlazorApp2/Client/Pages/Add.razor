@@ -15,17 +15,17 @@
         <DataAnnotationsValidator />
         <ValidationSummary />
             <div class="form-floating mb-3" style="height: 45px; width: 220px;">
-                <InputText @ref= "name" id="name" class="form-control" @bind-Value="_contact.name"/>
+                <InputText id="name" class="form-control" @bind-Value="_contact.name"/>
                 <label for="name">Nombre</label>
             </div>
                 <br>
             <div class="form-floating mb-3" style="height: 45px; width: 220px;">
-                <InputText @ref= "phone" id="phone" class="form-control" @bind-Value="_contact.phone"/>
+                <InputText id="phone" class="form-control" @bind-Value="_contact.phone"/>
                 <label for="phone">Telefono</label>
             </div>
                 <br>
             <div class="form-floating mb-3" style="height: 45px; width: 220px;">
-                <InputText @ref= "cellPhone" id="cellPhone" class="form-control" @bind-Value="_contact.cellPhone"/>
+                <InputText id="cellPhone" class="form-control" @bind-Value="_contact.cellPhone"/>
                 <label for="cellPhone">Celular</label>
             </div>
                 <br>
@@ -37,22 +37,10 @@
 
 @code
 {
-    InputText name;
-    InputText phone;
-    InputText cellPhone;
     private Contact _contact = new();
-    public static int sizeActually = 0;
     private async Task Post()
     {
-        if (Index.sizeContact > 0 && sizeActually < Index.sizeContact)
-        {
-            HttpResponseMessage responseMessage = await Http.PostAsJsonAsync<Contact>("/api/Contact", _contact);
-
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                sizeActually++;
-                Navigation.NavigateTo($"/listContact");
-            }
-        }
+        await Http.PostAsJsonAsync<Contact>("/api/Contact", _contact);
+        Navigation.NavigateTo($"/listContact");
     }
 }

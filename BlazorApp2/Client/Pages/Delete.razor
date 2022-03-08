@@ -29,17 +29,7 @@
     private Contact _contact = new();
     private async Task DeleteContact()
     {
-        HttpResponseMessage responseMessage = await Http.DeleteAsync($"/api/Contact/" + _contact.name);
-
-        if (responseMessage.IsSuccessStatusCode)
-        {
-            Add.sizeActually--;
-            Navigation.NavigateTo($"/listContact");
-        }
+        await Http.DeleteAsync($"/api/Contact/" + _contact.name);
+        Navigation.NavigateTo($"/listContact");
     }
-
-    @* private async Task DeleteContact(Contact contact)
-    {
-        await Server.DeleteContact(contact);
-    } *@
 }
