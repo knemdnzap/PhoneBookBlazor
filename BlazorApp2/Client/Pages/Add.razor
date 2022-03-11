@@ -41,6 +41,7 @@
     private async Task Post()
     {
         await Http.PostAsJsonAsync<Contact>("/api/Contact", _contact);
+        await JS.InvokeVoidAsync("alert", "Contacto agregado correctamente");
         Navigation.NavigateTo($"/listContact");
     }
 }

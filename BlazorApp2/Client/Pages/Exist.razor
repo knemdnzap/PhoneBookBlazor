@@ -12,12 +12,12 @@
 <div class="FormCss">
     <EditForm Model = "@_contact" OnValidSubmit="@ExistContact">
     <DataAnnotationsValidator />
+    <ValidationSummary />
         <div class="row gy-2 gx-3 align-items-center">
             <div class="col-auto">
                 <div class="form-floating">
                     <InputText id="name" class="form-control" @bind-Value="_contact.name"/>
                     <label for="name">Nombre</label>
-                    <ValidationMessage For= "(()=> _contact.name)"/>
                 </div>
             </div>
             <div class="col-auto">

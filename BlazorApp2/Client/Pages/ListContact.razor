@@ -5,7 +5,22 @@
 
 <PageTitle>Listar Contactos</PageTitle>
 
-<h1>Listar Contacto</h1>
+<form class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <h1>Listar Contacto</h1>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <button type="button" class="btn btn-success" @onclick="Create" style="float: right;">
+                    Añadir Contacto
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
 
 <p>Estos son tus contactos</p>
 
@@ -15,8 +30,8 @@
 }
 else
 {
-    <table class="table table-striped">
-        <thead>
+    <table class="table">
+        <thead class="table-dark">
             <tr>
                 <th>#</th>
                 <th>Nombre </th>
@@ -36,9 +51,6 @@ else
             }
         </tbody>
     </table>
-    <div>
-        <button class="btn btn-success" @onclick="Create">Añadir Contacto</button>
-    </div>
 }
 
 @code

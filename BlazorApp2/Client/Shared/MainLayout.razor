@@ -1,12 +1,22 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
+<div class="page @GetClass()">
     <div class="sidebar">
         <NavMenu />
     </div>
 
     <main>
         <div class="top-row px-4">
+
+            Tema
+
+            <select @onchange = "ThemeChange" style="margin-left: 1rem;">
+                @foreach (var mode in modes)
+                {
+                    <option selected = "@IsSelect(mode)" value="@mode">@mode</option>
+                }
+            </select>
+
             <a href="https://github.com/knemdnzap/PhoneBookBlazor.git" target="_blank">Acerca de</a>
         </div>
 
@@ -15,3 +25,21 @@
         </article>
     </main>
 </div>
+
+@code {
+    private string ChangeMode = "Brillo";
+    private List<string> modes = new List<string>() { "Brillo", "Oscuro" };
+    private string GetClass() {
+        if (ChangeMode == "Brillo")
+            return string.Empty;
+        else
+            return "modo-oscuro";
+    }
+
+    private bool IsSelect(string mode) => mode == ChangeMode;
+
+    private void ThemeChange (ChangeEventArgs e)
+    {
+        ChangeMode = e.Value.ToString();
+    }
+}

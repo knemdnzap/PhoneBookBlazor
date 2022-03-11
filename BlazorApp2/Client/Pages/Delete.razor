@@ -2,6 +2,7 @@
 @using BlazorApp2.Shared;
 @inject HttpClient Http
 @inject NavigationManager Navigation
+@inject IJSRuntime JS
 
 <PageTitle>Eliminar Contacto</PageTitle>
 
@@ -10,26 +11,35 @@
 <p>Ingresa el nombre del contacto que quieres eliminar</p>
 
 <div class="FormCss">
-    <EditForm Model = "@_contact" OnValidSubmit="@DeleteContact">
-    <DataAnnotationsValidator />
+    <EditForm Model="@_contact" OnValidSubmit="@DeleteContact">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
             <div class="form-floating mb-3" style="height: 45px; width: 220px;">
-                <InputText id="name" class="form-control" @bind-Value="_contact.name"/>
+                <InputText id="name" class="form-control" @bind-Value="_contact.name" />
                 <label for="name">Nombre</label>
-                <ValidationMessage For= "(()=> _contact.name)"/>
             </div>
             <br>
             <div class="col-12">
-                <button class="btn btn-danger" @onclick = "DeleteContact">Eliminar Contacto</button>
+                <button class="btn btn-danger" @onclick="DeleteContact">Eliminar Contacto</button>
             </div>
     </EditForm>
 </div>
 
+
+
 @code
 {
     private Contact _contact = new();
+    private bool contact;
+    private string message = "";
     private async Task DeleteContact()
     {
-        await Http.DeleteAsync($"/api/Contact/" + _contact.name);
-        Navigation.NavigateTo($"/listContact");
+        var Confirmed = await JS.InvokeAsync<bool>("confirm", $"¿Estás seguro de que quieres eliminar a {_contact.name}?");
+
+        if (Confirmed) {
+            Http.DeleteAsync($"/api/Contact/" + _contact.name);
+            await JS.InvokeVoidAsync("alert", "Contacto eliminado correctamente");
+            Navigation.NavigateTo($"/listContact");
+        }
     }
 }

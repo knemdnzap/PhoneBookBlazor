@@ -8,6 +8,18 @@ namespace BlazorApp2.Shared
 {
     public class Contact
     {
+        public Contact (string name, string cellPhone, string phone) {
+            this.name = name;
+            this.cellPhone = cellPhone;
+            this.phone = phone;
+        }
+
+        public Contact (string name) {
+            this.name = name;
+        }
+
+        public Contact (){}
+
         [Key]
         public int id { get; set;}
         [Required(ErrorMessage = "El nombre es obligatorio")]
@@ -23,5 +35,13 @@ namespace BlazorApp2.Shared
         [MaxLength(10, ErrorMessage = "Debe ingresar un número de celular que contenga maximo 10 digitos") ,
         MinLength(10, ErrorMessage = "Debe ingresar un número de celular que contenga minimo 10 digitos")]
         public string cellPhone { get; set; }
+
+        public bool equals(Contact contact)
+        {
+            if (this.name.Trim().Equals(contact.name.Trim())){
+                return true;
+            }
+            return false;
+        }
     }
 }

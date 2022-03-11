@@ -28,15 +28,15 @@
             <br>
         </div>
 
-        <div class="alert alert-secondary mt-4">
-            @if (contact != null)
-            {
-                <span class="oi oi-action-undo me-2">
-                    <span class="text-success">
-                        @message
+        <div class="alert alert-secondary mt-4" style="height: 200; width: 200;">
+                @if (contact != null)
+                {
+                    <span class="oi oi-action-undo me-2">
+                        <span class="text-success">
+                            @message
+                        </span>
                     </span>
-                </span>
-                } else{
+                } else {
                 <span class="oi oi-circle-x me-2">
                     <span class="text-danger">
                         @message
@@ -53,8 +53,8 @@
 {
     <p><em>Obteniendo los datos...</em></p>
 } else{
-    <table class="table table-stripede">
-        <thead>
+    <table class="table">
+        <thead class="table-dark">
             <tr>
                 <th>#</th>
                 <th>Nombre </th>
@@ -88,10 +88,12 @@
                 NameContact = contact.name;
                 CellPhone = contact.cellPhone;
                 message = "Aquí puedes visualizar el contacto que buscabas.";
-            } else{
-                message = "El contacto que buscas no existe. Intenta con otro o revisa ortografía.";
             }
         } catch(Exception){
+            contact.id = 0;
+            NameContact = "";
+            CellPhone = "";
+            message = "El contacto que buscas no existe. Intenta con otro o revisa ortografía.";
         }
     }
 }
